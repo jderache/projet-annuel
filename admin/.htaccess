@@ -1,4 +1,4 @@
 AuthName "Page d'administration protégée, veuillez vous identifier"
 AuthType Basic
-AuthUserFile "/home/exmachinef/www/je-code/esgi1/jderache/annuaire/admin/.htpasswd"
+AuthUserFile "/home/exmachinef/www/je-code/esgi1/jderache/mosaique/admin/.htpasswd"
 Require valid-user
