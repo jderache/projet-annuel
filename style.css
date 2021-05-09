@@ -1,10 +1,13 @@
 /* Body */
 
 body {
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	background-color: #130025;
 	font-family: RedHatDisplay;
+	margin: 10px;
 }
+
 /* Police d'écriture */
 
 @font-face {
@@ -53,13 +56,14 @@ body {
 /* H1 */
 
 h1 {
-	font-size: 150px;
+	font-size: 100px;
 	line-height: 1;
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
 	color: #FFF;
+	margin-top: 111px;
 }
 /* H2 */
 

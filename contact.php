@@ -34,7 +34,7 @@ body {
 .menu a {
 	font-family: Lexend;
 	font-weight: bold;
-	text-decoration: ;
+	text-decoration: none;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 0 10px;
@@ -74,7 +74,7 @@ input[type=submit]:hover {
 	font-family: Noto;
 }
 h1 {
-	font size: 150%;
+	font-size: 150%;
 	font-family: Lexend;
 	color: #FFF;
 	text-align:center;
@@ -85,7 +85,7 @@ h1 {
 <body>
 	<header class="header">
 		<nav class="menu">
-			<a href="https://www.je-code.com/esgi1/adavid28/annuaire">Retour vers l'Accueil</a>
+			<a href="https://www.je-code.com/esgi1/jderache/mosaique">Retour vers l'Accueil</a>
 		</nav>
 	</header>
   <br>
@@ -122,32 +122,32 @@ if (isset($_POST['submit'])) {
          $result->execute(array('adresseMail' => $adresseMail));
       }
 
-      $message = 'Vous avez recu un message via votre site internet, le voici : \n'.$_POST['message'];
-            
-      mail('davidachille18@gmail.com', 'Message Site Web', $message);
+      $message = 'Vous avez recu un message via votre site internet, le voici : <br/>'.$_POST['message'].'<br/> R&eacutepondre :</br>'.$_POST['mail'];
+	              
+      mail('davidachille18@gmail.com, derachejulien@orange.fr, tdnet59@gmail.com', 'Message Site Web', $message, "Content-type: text/html");
 
       // confirmation
       echo('<br> <h1>Votre message a bien &eacute;t&eacute; envoy&eacute; !</h1>');
       }
    }
 
-      if($_GET['email']){
-      $adresseMail = $_GET['email'];
-      //$db = new PDO('mysql:host=localhost;dbname=cv;charset=utf8', 'root', 'root');
-      $db = new PDO('mysql:host=exmachinefmci.mysql.db;dbname=exmachinefmci;charset=utf8', 'exmachinefmci', 'carp310M');
+//       if($_GET['email']){
+//       $adresseMail = $_GET['email'];
+//       //$db = new PDO('mysql:host=localhost;dbname=cv;charset=utf8', 'root', 'root');
+//       $db = new PDO('mysql:host=exmachinefmci.mysql.db;dbname=exmachinefmci;charset=utf8', 'exmachinefmci', 'carp310M');
 
-      $selectall = $db->query('SELECT * FROM tvinchentMail WHERE mail="'.$adresseMail.'"');
-        $result = $selectall->fetch();
-        $counttable = (count($result));
+//       $selectall = $db->query('SELECT * FROM tvinchentMail WHERE mail="'.$adresseMail.'"');
+//         $result = $selectall->fetch();
+//         $counttable = (count($result));
 
-        if($counttable >= 1){
-            $delete = $db->prepare('DELETE FROM tvinchentMail WHERE mail="'.$adresseMail.'"');
-            $delete->execute();
-        }   
+//         if($counttable >= 1){
+//             $delete = $db->prepare('DELETE FROM tvinchentMail WHERE mail="'.$adresseMail.'"');
+//             $delete->execute();
+//         }   
 
-      // confirmation de suppresion
-      echo('Votre &ecirc;tes bien desabonn&eacute; de notre liste de diffusion');
-}
+//       // confirmation de suppresion
+//       echo('Votre &ecirc;tes bien desabonn&eacute; de notre liste de diffusion');
+// }
  ?>
 </body>
 </html>
